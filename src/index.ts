@@ -1,4 +1,10 @@
-export { Langbly } from "./client.js";
+export {
+  Langbly,
+  LangblyError,
+  RateLimitError,
+  AuthenticationError,
+} from "./client.js";
+
 export type {
   LangblyOptions,
   TranslateOptions,
