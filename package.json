@@ -1,0 +1,40 @@
+{
+  "name": "langbly",
+  "version": "0.1.0",
+  "description": "Official JavaScript/TypeScript SDK for the Langbly translation API",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "type": "module",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": ["dist", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest run",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "translation",
+    "api",
+    "langbly",
+    "google-translate",
+    "i18n",
+    "localization",
+    "llm"
+  ],
+  "author": "Jasper de Winter <jasper@langbly.com>",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Langbly/langbly-js.git"
+  },
+  "homepage": "https://langbly.com",
+  "devDependencies": {
+    "typescript": "^5.4",
+    "vitest": "^1.6"
+  }
+}
