@@ -1,10 +1,11 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "module": "ESNext",
-    "moduleResolution": "bundler",
+    "module": "CommonJS",
+    "moduleResolution": "node",
     "declaration": true,
-    "outDir": "dist/esm",
+    "declarationDir": "dist/cjs",
+    "outDir": "dist/cjs",
     "rootDir": "src",
     "strict": true,
     "esModuleInterop": true,

@@ -12,3 +12,6 @@ export type {
   Detection,
   Language,
 } from "./client.js";
+
+// Default export for convenience: import Langbly from 'langbly'
+export { Langbly as default } from "./client.js";
