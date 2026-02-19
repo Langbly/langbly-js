@@ -16,6 +16,12 @@ export interface TranslateOptions {
   target: string;
   source?: string;
   format?: "text" | "html";
+  /** Describes what the text is about (max 500 chars). Example: "e-commerce checkout page". */
+  context?: string;
+  /** Tells the model how to translate (max 500 chars). Example: "Use informal Dutch". */
+  instructions?: string;
+  /** Term pairs to force specific translations (max 200 entries). */
+  glossary?: Array<{ source: string; target: string }>;
 }
 
 export interface Translation {
@@ -104,6 +110,9 @@ export class Langbly {
     const body: Record<string, unknown> = { q, target: options.target };
     if (options.source) body.source = options.source;
     if (options.format) body.format = options.format;
+    if (options.context) body.context = options.context;
+    if (options.instructions) body.instructions = options.instructions;
+    if (options.glossary) body.glossary = options.glossary;
 
     const data = await this.postWithRetry("/language/translate/v2", body);
 
